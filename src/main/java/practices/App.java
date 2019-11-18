@@ -8,20 +8,23 @@ import practices.di.DaggerAppComponent;
 
 public class App {
 
+    private static int problemCounter = 0;
     private AppComponent appComponent = DaggerAppComponent.builder().build();
 
-    public String getGreeting() {
+    private String getGreeting() {
         return "Hello world.";
     }
-    public AppComponent getAppComponent() {
+    private AppComponent getAppComponent() {
         return appComponent;
     }
 
     public static void main(String[] args) {
         App app = new App();
         System.out.println(app.getGreeting());
+        printProblemSolved(app.getAppComponent().provideFizzBuzz().getName());
+    }
 
-        // Problems
-        app.getAppComponent().provideFizzBuzz().solve(5);
+    private static void printProblemSolved(String problemName) {
+        System.out.println("Problem #" + problemCounter++ + " problem name: " + problemName + " completed.");
     }
 }

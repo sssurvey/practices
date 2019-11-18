@@ -17,6 +17,8 @@ import javax.inject.Inject
 * */
 class FizzBuzz @Inject constructor() {
 
+    fun getName() = "FizzBuzz"
+
     fun solve(inputNumber: Int) {
         when {
             inputNumber % 3 == 0 && inputNumber % 5 == 0 -> println("FizzBuzz")
