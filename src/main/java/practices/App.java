@@ -14,9 +14,7 @@ public class App {
     private String getGreeting() {
         return "Hello world.";
     }
-    private AppComponent getAppComponent() {
-        return appComponent;
-    }
+    private AppComponent getAppComponent() { return appComponent; }
 
     public static void main(String[] args) {
         App app = new App();
