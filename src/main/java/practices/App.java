@@ -11,7 +11,7 @@ public class App {
     private static int problemCounter = 0;
     private AppComponent appComponent = DaggerAppComponent.builder().build();
 
-    private String getGreeting() {
+    public String getGreeting() {
         return "Hello world.";
     }
     private AppComponent getAppComponent() { return appComponent; }
