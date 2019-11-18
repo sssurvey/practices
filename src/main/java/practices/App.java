@@ -12,7 +12,7 @@ public class App {
     private AppComponent appComponent = DaggerAppComponent.builder().build();
 
     public String getGreeting() {
-        return "Hello world.";
+        return "Hello, welcome to leet code practice";
     }
     private AppComponent getAppComponent() { return appComponent; }
 
