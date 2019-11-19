@@ -1,7 +1,7 @@
 package practices.di
 
 import dagger.Component
-import practices.easy.FizzBuzz
+import practices.questions.easy.FizzBuzz
 import javax.inject.Singleton
 
 @Singleton

@@ -1,4 +1,4 @@
-package practices.easytest
+package practices.questionstest.easytest
 
 import org.junit.After
 import org.junit.Test
@@ -6,7 +6,7 @@ import org.junit.Test
 import org.junit.Assert.*
 import org.junit.Before
 import practices.di.DaggerTestAppComponent
-import practices.easy.FizzBuzz
+import practices.questions.easy.FizzBuzz
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
 import java.lang.Exception

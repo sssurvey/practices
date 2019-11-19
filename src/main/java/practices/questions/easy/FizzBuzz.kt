@@ -1,4 +1,4 @@
-package practices.easy
+package practices.questions.easy
 
 import javax.inject.Inject
 import javax.inject.Singleton
