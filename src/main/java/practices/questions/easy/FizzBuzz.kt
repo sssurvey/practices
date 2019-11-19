@@ -1,5 +1,6 @@
 package practices.questions.easy
 
+import practices.questions.Solution
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -18,17 +19,19 @@ import javax.inject.Singleton
 *
 * */
 @Singleton
-class FizzBuzz @Inject constructor() {
+class FizzBuzz @Inject constructor(): Solution<Int, Unit> {
 
-    fun getName() = "FizzBuzz"
+    override fun getName() = "FizzBuzz"
 
-    fun solve(inputNumber: Int) {
-        when {
-            inputNumber % 3 == 0 && inputNumber % 5 == 0 -> print("FizzBuzz")
-            inputNumber % 3 == 0 -> print("Fizz")
-            inputNumber % 5 == 0 -> print("Buzz")
-            inputNumber < 1 || inputNumber > 100 -> throw Exception("Number out of range")
-            else -> print(inputNumber.toString())
+    override fun solve(solutionIn: Int?) {
+        solutionIn?.let {
+            when {
+                solutionIn % 3 == 0 && solutionIn % 5 == 0 -> print("FizzBuzz")
+                solutionIn % 3 == 0 -> print("Fizz")
+                solutionIn % 5 == 0 -> print("Buzz")
+                solutionIn < 1 || solutionIn > 100 -> throw Exception("Number out of range")
+                else -> print(solutionIn.toString())
+            }
         }
     }
 
