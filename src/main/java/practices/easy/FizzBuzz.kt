@@ -1,6 +1,8 @@
 package practices.easy
 
 import javax.inject.Inject
+import javax.inject.Singleton
+
 /*
 * 000-FizzBuzz
 *
@@ -15,16 +17,18 @@ import javax.inject.Inject
 * Each output should be followed by a new line.
 *
 * */
+@Singleton
 class FizzBuzz @Inject constructor() {
 
     fun getName() = "FizzBuzz"
 
     fun solve(inputNumber: Int) {
         when {
-            inputNumber % 3 == 0 && inputNumber % 5 == 0 -> println("FizzBuzz")
-            inputNumber % 3 == 0 -> println("Fizz")
-            inputNumber % 5 == 0 -> println("Buzz")
-            else -> println(inputNumber.toString())
+            inputNumber % 3 == 0 && inputNumber % 5 == 0 -> print("FizzBuzz")
+            inputNumber % 3 == 0 -> print("Fizz")
+            inputNumber % 5 == 0 -> print("Buzz")
+            inputNumber < 1 || inputNumber > 100 -> throw Exception("Number out of range")
+            else -> print(inputNumber.toString())
         }
     }
 
